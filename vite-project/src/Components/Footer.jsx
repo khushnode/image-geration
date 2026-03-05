@@ -2,143 +2,105 @@ import React from 'react'
 
 export default function Footer() {
   return (
-    <>
-       <footer className="bg-white pt-16 pb-8 px-6 md:px-12 border-t border-gray-100">
-        <div className="max-w-7xl mx-auto">
-            
-            <div className="mb-12">
-                <div className="flex items-center gap-1 mb-3">
-                    <span className="text-3xl font-black tracking-tighter text-slate-900">scalio</span>
-                    <span className="text-xl text-slate-900">✦</span>
-                </div>
-                <p className="text-slate-500 text-sm max-w-xs mb-6 leading-relaxed">
-                    The fastest way to create D2C ads that sell. Made for Indian brands.
-                </p>
-                
+    <footer className="relative bg-[#fafafa] pt-24 pb-12 px-6 md:px-12 border-t border-slate-200/60 overflow-hidden">
+      {/* Background Decor - Matching the Pricing Section */}
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_bottom,_var(--tw-gradient-stops))] from-orange-50/40 via-transparent to-transparent -z-10"></div>
+
+      <div className="max-w-7xl mx-auto">
+        
+        {/* Brand Section */}
+        <div className="mb-16">
+          <div className="flex items-center gap-1 mb-4">
+            <span className="text-4xl font-black tracking-tighter text-slate-900">scalio</span>
+            <span className="text-2xl text-orange-500 animate-pulse">✦</span>
+          </div>
+          <p className="text-slate-500 text-base max-w-sm leading-relaxed font-medium">
+            The fastest way to create D2C ads that sell. 
+            <span className="text-slate-900 block mt-1">Engineered for the next generation of Indian brands.</span>
+          </p>
+        </div>
+
+        {/* Links Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-7 gap-y-12 gap-x-8 mb-20">
+          
+          {/* Column Logic - Reusable for all sections */}
+          {[
+            {
+              title: "Use Cases",
+              links: ["AI Background Change", "AI Background Removal", "Bulk Product Photography", "D2C Photography", "Image Upscaling", "UGC Ads Creation"]
+            },
+            {
+              title: "Garments",
+              links: ["Saree Photography", "Dress Photography", "Kurta Photography", "Lehenga Photography", "Shirt Photography", "Jeans Photography"]
+            },
+            {
+              title: "Marketplaces",
+              links: ["Amazon India", "Flipkart Shop", "Myntra Fashion", "Shopify Store", "Instagram Shop", "Nykaa Fashion"]
+            },
+            {
+              title: "Ad Platforms",
+              links: ["Facebook Ads", "Instagram Reels", "Google Display", "TikTok Ads", "Pinterest Pins", "YouTube Shorts"]
+            },
+            {
+              title: "Industries",
+              links: ["E-commerce", "Fashion Brands", "Beauty & Care", "Jewelry", "Retail", "Home Decor"]
+            },
+            {
+              title: "Products",
+              links: ["Carousel Ads", "Social Media", "Website Images", "Landing Pages", "Seasonal Shoots", "Editorial"]
+            },
+            {
+              title: "Versus",
+              links: ["vs ChatGPT", "vs PhotoRoom", "vs Botika", "vs Hiring Pro", "vs Gemini", "vs Traditional"]
+            }
+          ].map((section, idx) => (
+            <div key={idx} className="flex flex-col">
+              <h4 className="font-bold text-slate-900 text-[14px] uppercase tracking-widest mb-6">{section.title}</h4>
+              <ul className="space-y-3.5">
+                {section.links.map((link, i) => (
+                  <li key={i} className="text-slate-500 text-[13px] font-medium hover:text-orange-600 hover:translate-x-1 transition-all duration-200 cursor-pointer">
+                    {link}
+                  </li>
+                ))}
+                <li className="text-orange-600 font-bold text-[12px] cursor-pointer pt-2 group">
+                  Explore All <span className="inline-block group-hover:translate-x-1 transition-transform">→</span>
+                </li>
+              </ul>
             </div>
+          ))}
+        </div>
 
-            <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-7 gap-y-10 gap-x-4 mb-16">
-                
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Use Cases</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">AI Background Change</li>
-                        <li className="hover:text-slate-900 cursor-pointer">AI Background Removal</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Bulk Product Photography AI</li>
-                        <li className="hover:text-slate-900 cursor-pointer">D2C Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">AI Image Upscaling</li>
-                        <li className="hover:text-slate-900 cursor-pointer">UGC Product Ads Creation</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Boutique Product Photography</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Garments</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">Saree Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Dress Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Kurta Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Lehenga Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Shirt Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Jeans Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Jacket Product Photography</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Marketplaces</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">Amazon Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Flipkart Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Myntra Fashion Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Shopify Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Instagram Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Facebook Shop Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Nykaa Fashion Photography</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Ad Platforms</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">Facebook Ad Creatives</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Instagram Ad Creatives</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Google Display Ads</li>
-                        <li className="hover:text-slate-900 cursor-pointer">TikTok Ad Creatives</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Pinterest Ad Creatives</li>
-                        <li className="hover:text-slate-900 cursor-pointer">LinkedIn Sponsored Ads</li>
-                        <li className="hover:text-slate-900 cursor-pointer">YouTube Ad Creatives</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Industries</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">E-commerce Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Fashion Brand Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Beauty Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Jewelry Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Retail Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Fashion Campaign Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Home Decor Product Photography</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Products</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">Product Carousel Ads</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Product Social Media Content</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Product Website Images</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Product Static Image Ads for Facebook</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Product Photos for Landing Pages</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Seasonal Product Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Editorial Fashion Photography</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h4 className="font-bold text-slate-900 text-sm mb-5">Versus</h4>
-                    <ul className="space-y-3 text-slate-500 text-[13px]">
-                        <li className="hover:text-slate-900 cursor-pointer">Scalio vs ChatGPT</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Scalio vs Getayla</li>
-                        <li className="hover:text-slate-900 cursor-pointer">AI vs Hiring Photographer</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Scalio vs PhotoRoom</li>
-                        <li className="hover:text-slate-900 cursor-pointer">AI vs Traditional Photography</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Scalio vs Botika</li>
-                        <li className="hover:text-slate-900 cursor-pointer">Scalio vs Gemini</li>
-                        <li className="text-orange-500 font-semibold cursor-pointer pt-1">Explore All →</li>
-                    </ul>
-                </div>
+        {/* Contact & Legal Section */}
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center gap-10 border-t border-slate-200/60 pt-12">
+          
+          <div className="space-y-2">
+            <h4 className="font-bold text-slate-900 text-sm mb-4">Get in touch</h4>
+            <div className="flex flex-wrap gap-x-8 gap-y-2 text-slate-500 text-sm font-medium">
+              <a href="tel:+919429694717" className="hover:text-slate-900 transition-colors flex items-center gap-2">
+                <span className="text-orange-500 text-lg">📞</span> +91 9429694717
+              </a>
+              <a href="mailto:support@scalio.app" className="hover:text-slate-900 transition-colors flex items-center gap-2">
+                <span className="text-orange-500 text-lg">✉</span> support@scalio.app
+              </a>
             </div>
+            <p className="text-slate-400 text-xs mt-4">
+              Scalio Technology Private Limited • K-2035 CR Park, New Delhi
+            </p>
+          </div>
 
-            <div className="mb-16 border-b border-gray-100 pb-12">
-                <h4 className="font-bold text-slate-900 text-sm mb-4">Contact</h4>
-                <div className="text-slate-500 text-sm space-y-1">
-                    <p>+91 9429694717</p>
-                    <p>support@scalio.app</p>
-                    <p>Scalio Technology Private Limited</p>
-                    <p>K-2035 CR Park, New Delhi</p>
-                </div>
+          <div className="flex flex-col md:flex-row items-center gap-8 w-full lg:w-auto">
+            <div className="flex gap-8 text-[13px] font-bold text-slate-500">
+              <a href="#" className="hover:text-orange-600 transition-colors">Blog</a>
+              <a href="#" className="hover:text-orange-600 transition-colors">Privacy</a>
+              <a href="#" className="hover:text-orange-600 transition-colors">Terms</a>
             </div>
-
-            <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-[13px] text-slate-400">
-                <p>© 2026 Scalio. All rights reserved.</p>
-                <div className="flex gap-6">
-                    <a href="#" className="hover:text-slate-700">Blog</a>
-                    <a href="#" className="hover:text-slate-700">Privacy Policy</a>
-                    <a href="#" className="hover:text-slate-700">Terms of Use</a>
-                </div>
-            </div>
+            <p className="text-[13px] text-slate-400 font-medium">
+              © 2026 <span className="text-slate-900 font-bold">Scalio</span>. All rights reserved.
+            </p>
+          </div>
 
         </div>
+      </div>
     </footer>
-    </>
   )
 }

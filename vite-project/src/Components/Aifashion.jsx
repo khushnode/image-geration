@@ -1,27 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export default function Aifashion() {
-      const modal = document.getElementById('modal-overlay');
-        function openModal() {
-            modal.classList.remove('hidden');
-            document.body.style.overflow = 'hidden'; // Stop scrolling
-        }
-        function closeModal() {
-            modal.classList.add('hidden');
-            document.body.style.overflow = 'auto'; // Enable scrolling
-        }
-        // Close on outside click
-        window.onclick = function(event) {
-            if (event.target == modal) {
-                closeModal();
-            }
-        }
-        function updateCost() {
-            const count = document.getElementById('photo-count').value;
-            const price = count * 10;
-            document.getElementById('display-count').innerText = count;
-            document.getElementById('total-price').innerText = price;
-        }
+      const [modalOpen, setModalOpen] = useState(false);
+          const [photoCount, setPhotoCount] = useState(50);
+      
+          const openModal = () => setModalOpen(true);
+          const closeModal = () => setModalOpen(false);
+      
+          const updateCost = (e) => {
+              setPhotoCount(Number(e.target.value));
+          };
   return (
     <>
           <nav class="flex justify-center pt-6">
@@ -45,7 +33,7 @@ export default function Aifashion() {
                 Myntra, Flipkart, Meesho, Instagram & more!</span>
         </p>
         <div class="flex flex-col items-center gap-4">
-            <button onclick="openModal()"
+            <button onClick={openModal}
                 class="bg-[#FF4D00] hover:bg-[#E64500] text-white font-bold py-4 px-12 rounded-lg text-lg transition-all shadow-lg hover:shadow-orange-200 active:scale-95">
                 Start Free Trial
             </button>
@@ -225,7 +213,7 @@ export default function Aifashion() {
             </div>
         </div>
         <div class="flex justify-center mt-16">
-            <button onclick="openModal()"
+            <button onClick={openModal}
                 class="bg-[#FF4D00] hover:bg-[#E64500] text-white font-bold py-3 px-8 rounded-lg transition-all shadow-md active:scale-95">
                 Get Started Now
             </button>
@@ -432,6 +420,141 @@ export default function Aifashion() {
             </div>
         </div>
     </div>
+     {/* MODAL */}
+            {modalOpen && (
+                <div
+                    className="fixed inset-0 bg-black/40 backdrop-blur-md z-[100] flex items-center justify-center p-4"
+                    onClick={closeModal}
+                >
+                    <div
+                        className="bg-white w-full max-w-xl rounded-3xl overflow-hidden shadow-[0_20px_60px_rgba(0,0,0,0.25)] border border-slate-200"
+                        onClick={(e) => e.stopPropagation()}
+                    >
+
+                        {/* HEADER */}
+                        <div className="bg-gradient-to-r from-orange-500 to-orange-600 p-6 px-8 flex justify-between items-center">
+
+                            <div>
+                                <h2 className="text-xl font-bold text-white tracking-tight">
+                                    Get Started
+                                </h2>
+                                <p className="text-orange-100 text-xs">
+                                    Transform your business with AI photography
+                                </p>
+                            </div>
+
+                            <button
+                                onClick={closeModal}
+                                className="text-white/80 hover:text-white text-lg"
+                            >
+                                ✕
+                            </button>
+
+                        </div>
+
+
+                        {/* FORM */}
+                        <div className="p-7 px-8 space-y-5">
+
+                            <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+
+                                {/* Brand */}
+                                <div>
+                                    <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+                                        Brand Name *
+                                    </label>
+
+                                    <input
+                                        type="text"
+                                        placeholder="Brand Name"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm
+              focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
+                                    />
+                                </div>
+
+                                {/* Email */}
+                                <div>
+                                    <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+                                        Email Address *
+                                    </label>
+
+                                    <input
+                                        type="email"
+                                        placeholder="name@company.com"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm
+              focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
+                                    />
+                                </div>
+
+                                {/* Phone */}
+                                <div>
+                                    <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+                                        Phone Number *
+                                    </label>
+
+                                    <input
+                                        type="tel"
+                                        placeholder="+91 00000 00000"
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm
+              focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
+                                    />
+                                </div>
+
+                                {/* Photos */}
+                                <div>
+                                    <label className="block text-[10px] font-bold text-slate-500 uppercase tracking-widest mb-1.5">
+                                        Photos Needed *
+                                    </label>
+
+                                    <select
+                                        value={photoCount}
+                                        onChange={updateCost}
+                                        className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-sm
+              focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-orange-500 transition"
+                                    >
+                                        <option value="50">50 photos</option>
+                                        <option value="100">100 photos</option>
+                                        <option value="500">500 photos</option>
+                                    </select>
+                                </div>
+
+                            </div>
+
+
+                            {/* COST CARD */}
+                            <div className="bg-gradient-to-r from-slate-900 to-slate-800 rounded-2xl p-5 text-white flex justify-between items-center shadow-lg">
+
+                                <div>
+                                    <p className="text-[10px] text-slate-400 uppercase font-bold tracking-widest">
+                                        Estimated Cost
+                                    </p>
+
+                                    <p className="text-sm text-slate-200">
+                                        {photoCount} images × ₹10
+                                    </p>
+                                </div>
+
+                                <div className="text-2xl font-bold">
+                                    ₹{photoCount * 10}
+                                </div>
+
+                            </div>
+
+
+                            {/* BUTTON */}
+                            <button
+                                className="w-full bg-orange-600 hover:bg-orange-700 active:scale-[0.98]
+          text-white font-semibold py-3 rounded-xl transition shadow-lg text-sm"
+                            >
+                                Continue →
+                            </button>
+
+                        </div>
+
+                    </div>
+                </div>
+            )}
+
     </>
   )
 }
