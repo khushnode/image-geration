@@ -3,12 +3,14 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import { Route, Routes } from 'react-router-dom'
-import Header from './Components.jsx/Header'
-import Footer from './Components.jsx/Footer'
-import Blog from './Components.jsx/Blog'
-import Contact from './Components.jsx/Contact'
-import Pricing from './Components.jsx/Pricing'
-import Aiproduct from './Components.jsx/Aiproduct'
+import Header from './Components/Header'
+import Footer from './Components/Footer'
+import Blog from './Components/Blog'
+import Contact from './Components/Contact'
+import Pricing from './Components/Pricing'
+import Aiproduct from './Components/Aiproduct'
+import Homepage from './Pages/Homepage'
+import Aifashion from './Components/Aifashion'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -17,11 +19,12 @@ function App() {
     <>
       <Header />
       <Routes>
+        <Route path='/' element={<Homepage/>}/>
         <Route path='/blogs' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/pricing' element={<Pricing />} />
-                <Route path='/aiproduct' element={<Aiproduct />} />
-
+        <Route path='/aiproduct' element={<Aiproduct />} />
+        <Route path='/aifashion' element ={<Aifashion/>}/>
       </Routes>
       <Footer />
     </>
