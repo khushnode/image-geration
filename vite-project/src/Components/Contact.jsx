@@ -15,7 +15,7 @@ export default function Contact() {
           How can we <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-pink-600">help?</span>
         </h1>
         <p className="text-slate-500 max-w-lg mx-auto text-base md:text-lg font-medium leading-relaxed">
-          Have questions about Scalio? Reach out and our team will get back to you shortly.
+          Have questions about FitVersion? Reach out and our team will get back to you shortly.
         </p>
       </header>
 
@@ -58,7 +58,7 @@ export default function Contact() {
             {/* Other Contact Methods */}
             {[
               { label: "Phone", value: "+91 8092492943", icon: "📞", link: "tel:+918092492943" },
-              { label: "Email", value: "support@scalio.app", icon: "✉️", link: "mailto:support@scalio.app" }
+              { label: "Email", value: "support@firversion.app", icon: "✉️", link: "mailto:support@fitversion.app" }
             ].map((item, i) => (
               <a key={i} href={item.link} 
                  className="group flex items-center p-4 md:p-5 rounded-[1.5rem] md:rounded-[2rem] bg-slate-50 border border-transparent hover:border-orange-200 hover:bg-white transition-all duration-300 hover:shadow-xl hover:shadow-orange-50 active:scale-[0.98]">
@@ -88,7 +88,7 @@ export default function Contact() {
 
           <div className="mt-10 md:mt-12 pt-8 border-t border-slate-100 text-center">
             <p className="text-slate-400 text-xs md:text-sm font-medium">
-              Scalio Technology Private Limited
+              FitVersion Technology Private Limited
             </p>
           </div>
         </div>

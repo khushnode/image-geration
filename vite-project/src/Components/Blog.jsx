@@ -4,7 +4,7 @@ export default function Blog() {
   return (
     <>
     <header className="max-w-7xl mx-auto px-4 py-12 text-center">
-        <h1 className="text-4xl font-bold mb-4">Scalio <span
+        <h1 className="text-4xl font-bold mb-4">FitVersion <span
                 className="text-orange-600">Blog</span></h1>
         <p className="text-gray-500 max-w-2xl mx-auto mb-8">
             Discover the latest insights on AI photography, e-commerce growth,
@@ -68,7 +68,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=1"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Founder, CEO</p>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=2"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Content Lead</p>
                         </div>
                     </div>
@@ -128,7 +128,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=3"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Art Director</p>
                         </div>
                     </div>
@@ -157,7 +157,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=4"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">UX Researcher</p>
                         </div>
                     </div>
@@ -186,7 +186,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=5"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Growth Hacker</p>
                         </div>
                     </div>
@@ -216,7 +216,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=6"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Design Lead</p>
                         </div>
                     </div>
@@ -245,7 +245,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=7"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Data Analyst</p>
                         </div>
                     </div>
@@ -274,7 +274,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=8"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Project Manager</p>
                         </div>
                     </div>
@@ -303,7 +303,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=9"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Marketing Lead</p>
                         </div>
                     </div>
@@ -332,7 +332,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=10"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Lead Designer</p>
                         </div>
                     </div>
@@ -361,7 +361,7 @@ export default function Blog() {
                         <img src="https://i.pravatar.cc/150?u=11"
                             className="w-10 h-10 rounded-full mr-3" alt="author"/>
                         <div>
-                            <p className="text-sm font-bold">Scalio Team</p>
+                            <p className="text-sm font-bold">FitVersion Team</p>
                             <p className="text-xs text-gray-400">Tech Lead</p>
                         </div>
                     </div>

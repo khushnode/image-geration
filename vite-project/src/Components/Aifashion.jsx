@@ -223,7 +223,7 @@ export default function Aifashion() {
     <div class="text-center mb-16">
         <h2 class="text-3xl md:text-4xl font-extrabold text-[#0F172A] mb-4">Success Stories from Indian Brands</h2>
         <p class="text-slate-500 max-w-2xl mx-auto text-base">
-            Join hundreds of Indian fashion brands who've transformed their business with Scalio's AI fashion photography.
+            Join hundreds of Indian fashion brands who've transformed their business with FitVersion's AI fashion photography.
         </p>
     </div>
 
@@ -233,7 +233,7 @@ export default function Aifashion() {
                 <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
             </div>
             <p class="text-slate-600 text-sm leading-relaxed mb-6">
-                Scalio transformed our saree business. We went from spending ₹50,000 on photoshoots to just ₹1,500 for 100 photos. Our Myntra sales increased by 60%!
+                FitVersion transformed our saree business. We went from spending ₹50,000 on photoshoots to just ₹1,500 for 100 photos. Our Myntra sales increased by 60%!
             </p>
             <div class="bg-green-50 text-green-700 text-xs font-bold py-2 px-4 rounded-lg text-center mb-6">
                 60% increase in sales

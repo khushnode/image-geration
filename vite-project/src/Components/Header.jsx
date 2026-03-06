@@ -18,15 +18,15 @@ export default function Header() {
     <nav className="fixed top-0 left-0 w-full z-[100] bg-white/90 backdrop-blur-md border-b border-slate-200 shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
-          
+
           {/* Logo Section */}
           <Link to="/" className="flex items-center gap-2 group cursor-pointer no-underline">
-            <div className="bg-slate-900 p-1.5 rounded-lg group-hover:rotate-12 transition-transform duration-300">
-              <span className="text-white text-xl">✦</span>
+            <div className="flex items-center gap-2">
+              <div className="w-2 h-8 bg-gradient-to-b from-orange-500 to-pink-600 rounded-full animate-pulse"></div>
+              <h1 className="text-3xl font-black tracking-tight text-slate-900">
+                FitVeSion<span className="italic font-light text-orange-500">AI</span>
+              </h1>
             </div>
-            <span className="text-2xl font-black tracking-tighter text-slate-900 italic">
-              scalio
-            </span>
           </Link>
 
           {/* Desktop Menu */}
@@ -54,8 +54,8 @@ export default function Header() {
 
           {/* Mobile Toggle Button */}
           <div className="md:hidden flex items-center">
-            <button 
-              onClick={() => setIsOpen(!isOpen)} 
+            <button
+              onClick={() => setIsOpen(!isOpen)}
               className="p-2 text-slate-600 hover:bg-slate-100 rounded-lg transition-colors"
             >
               {isOpen ? (

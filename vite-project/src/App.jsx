@@ -11,6 +11,8 @@ import Pricing from './Components/Pricing'
 import Aiproduct from './Components/Aiproduct'
 import Homepage from './Pages/Homepage'
 import Aifashion from './Components/Aifashion'
+import Login from './Components/Login'
+import CreateAccount from "./Components/CreateAccount"
 
 function App() {
   const [count, setCount] = useState(0)
@@ -19,12 +21,14 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path='/' element={<Homepage/>}/>
+        <Route path='/' element={<Homepage />} />
         <Route path='/blogs' element={<Blog />} />
         <Route path='/contact' element={<Contact />} />
         <Route path='/pricing' element={<Pricing />} />
         <Route path='/aiproduct' element={<Aiproduct />} />
-        <Route path='/aifashion' element ={<Aifashion/>}/>
+        <Route path='/aifashion' element={<Aifashion />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/createAccount' element={<CreateAccount />} />
       </Routes>
       <Footer />
     </>

@@ -11,7 +11,7 @@ export default function Footer() {
         {/* Brand Section */}
         <div className="mb-16">
           <div className="flex items-center gap-1 mb-4">
-            <span className="text-4xl font-black tracking-tighter text-slate-900">scalio</span>
+            <span className="text-4xl font-black tracking-tighter text-slate-900">FitVersion</span>
             <span className="text-2xl text-orange-500 animate-pulse">✦</span>
           </div>
           <p className="text-slate-500 text-base max-w-sm leading-relaxed font-medium">
@@ -79,12 +79,12 @@ export default function Footer() {
               <a href="tel:+919429694717" className="hover:text-slate-900 transition-colors flex items-center gap-2">
                 <span className="text-orange-500 text-lg">📞</span> +91 9429694717
               </a>
-              <a href="mailto:support@scalio.app" className="hover:text-slate-900 transition-colors flex items-center gap-2">
-                <span className="text-orange-500 text-lg">✉</span> support@scalio.app
+              <a href="mailto:support@FitVersion.app" className="hover:text-slate-900 transition-colors flex items-center gap-2">
+                <span className="text-orange-500 text-lg">✉</span> support@FitVersion.app
               </a>
             </div>
             <p className="text-slate-400 text-xs mt-4">
-              Scalio Technology Private Limited • K-2035 CR Park, New Delhi
+              FitVersion Technology Private Limited • K-2035 CR Park, New Delhi
             </p>
           </div>
 
@@ -95,7 +95,7 @@ export default function Footer() {
               <a href="#" className="hover:text-orange-600 transition-colors">Terms</a>
             </div>
             <p className="text-[13px] text-slate-400 font-medium">
-              © 2026 <span className="text-slate-900 font-bold">Scalio</span>. All rights reserved.
+              © 2026 <span className="text-slate-900 font-bold">FitVersion</span>. All rights reserved.
             </p>
           </div>
 
